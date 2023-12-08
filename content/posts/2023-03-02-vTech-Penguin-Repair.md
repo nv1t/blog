@@ -1,10 +1,7 @@
 ---
 title: vTech Penguin Repair
 date: 2023-03-02
-layout: post
-type: blog
 slug: vtech-penguin-repair
-published: true
 ---
 
 From time to time my girlfriend brings electronic children's toys home which she found in give-away boxes. Most of the time these don't work and i am intrigued in fixing them.
