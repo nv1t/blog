@@ -1,4 +1,4 @@
-baseURL = 'https://nv1t.github.io/'
+baseURL = 'https://nv1t.github.io/blog-test/'
 languageCode = 'en-us'
 title = 'Blog'
 theme = 'tranquilpeak'
