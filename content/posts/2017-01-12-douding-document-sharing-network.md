@@ -3,8 +3,6 @@ title: Douding Document Sharing Network
 date: 2017-01-12
 layout: post
 categories:
-- webapplicatoin
-- german
 tags:
 - 'reverse engineering'
 slug: douding-document-sharing-network
