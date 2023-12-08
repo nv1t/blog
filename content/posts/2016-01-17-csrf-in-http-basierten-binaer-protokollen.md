@@ -1,12 +1,7 @@
 ---
 title: 'CSRF in Http Basierten Binaer Protokollen'
-date: 2023-12-07
-categories:
-- tranquilpeak
-- features
-tags:
-- html elements
-- markdown
+date: 2016-01-17
+slug: 'csrf-in-http-basierten-binaer-protokollen'
 ---
 # Einleitung: Was ist eine CSRF?
 HTTP ist im Grunde ein stateless Protokoll. Man stellt eine Anfrage an einen Server und bekommt darauf die Antwort. Der Server schliesst nun die Verbindung und das Spiel beginnt von neuem. Damit der Server weiss wer man ist, muss zwingend eine Art Token mitgeschickt werden. Dies geschieht traditionell mit Cookies. Mit Cookies kann der Server auf dem Client Informationen speichern. Ein Cookie kann fuer einen bestimmten Pfad fuer einen gewissen Zeitraum vom Server beim Client gesetzt werden. Diese Informationen werden auch bei jeder Anfrage automatisch mitgeschickt. Da diese Cookies einen State in HTTP implementieren werden sie auch verwendet um Authentifizierungen zu Regeln. Meist wird nach einem Login ein Session Cookie generiert mit einem zufaelligen Token um dem Client die Moeglichkeit zu bieten ohne weiteren Login die Seite zu verwenden.
