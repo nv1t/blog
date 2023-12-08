@@ -7,6 +7,7 @@ slug: vtech-penguin-repair
 From time to time my girlfriend brings electronic children's toys home which she found in give-away boxes. Most of the time these don't work and i am intrigued in fixing them.
 
 It was a beaten up "Vtech Pinguin Rasselspass".
+<!--more-->
 
 # Inspection of the Device
 Upon opening the penguin the solder blobs on the battery connector looked weird. It looked like somebody tried to fix it beforehand and applied too much heat and waaay too much solder.

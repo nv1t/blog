@@ -6,7 +6,6 @@ categories:
 tags:
 - 'reverse engineering'
 slug: douding-document-sharing-network
-published: true
 ---
 *Ich werde keinen Downloader anbieten, weil mir das Coden dieses zu Muehseelig ist. Das hier ist ein Proof of Concept mit einzelnen Scripten, die fuer sich zum jetzigen Zeitpunkt funktionieren.*
 
