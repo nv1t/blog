@@ -1,10 +1,7 @@
 ---
 title: The weird BLE-Lock
 date: 2022-11-27
-layout: post
-type: blog
 slug: the-weired-ble-lock
-published: true
 ---
 
 **tl;dr;** My knowledge in Bluetooth LE Communication got quite rusty over time and i wanted to refresh it with an easy target the other day. I wanted to open up the lock with a simple bluetooth command but ended up having access to their entire backend database with a lot of unique users across their entire product lineup.
@@ -40,7 +37,7 @@ public static C0015b c(Context context) {
 
 Heureka, the password was found and i was able to include the certificate into burp.
 
-![]({{site.baseurl}}/img/posts/2022/Pasted image 20221103195341.png)
+![](/img/2022/Pastedimage20221103195341.png)
 
 ### Login
 After a registration and login request is was time to observe the communication of the app to the backend servers.
@@ -235,7 +232,7 @@ We now have a method to lookup every lock in existence. I take the assumptions, 
 
 But something weird popped up.
 
-![]({{site.baseurl}}/img/posts/2022/Pasted image 20221124094309.png)
+![](/img/2022/Pastedimage20221124094309.png)
 
 ## It was at that moment, they knew, they fucked up
 I usually do my whole shennanigans with APIs with Burp. My Burp configuration does automatic checks with single or double quotes on every parameter.
