@@ -52,12 +52,12 @@ name = "nv1t"
   name = "Home"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-home\" aria-hidden=\"true\"></i>"
   url = "/"
-[[menu.main]]
-  weight = 2
-  identifier = "categories"
-  name = "Categories"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-bookmark\" aria-hidden=\"true\"></i>"
-  url = "/categories"
+#[[menu.main]]
+#  weight = 2
+#  identifier = "categories"
+#  name = "Categories"
+#  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-bookmark\" aria-hidden=\"true\"></i>"
+#  url = "/categories"
 [[menu.main]]
   weight = 3
   identifier = "tags"
@@ -334,7 +334,7 @@ name = "nv1t"
   # --------------
   [params.comment]
     [params.comment.disqus]
-      enable = false 
+      enable = false
       shortname = "hugo-tranquilpeak-theme"
     [params.comment.gitalk]
       enable = false
