@@ -4,6 +4,10 @@ date: 2017-01-12
 layout: post
 slug: freeing-elmo
 published: true
+tags:
+- 'reverse engineering'
+- 'usb'
+- 'camera'
 ---
 (Source: https://github.com/nv1t/freeElmo/)
 

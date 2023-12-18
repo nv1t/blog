@@ -4,6 +4,10 @@ date: 2017-07-11
 layout: post
 slug: sql-injection-after-order-by
 published: true
+tags:
+- 'sql injection'
+- 'challenge'
+- 'owasp'
 ---
 I like a good challenge.
 

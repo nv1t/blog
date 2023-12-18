@@ -2,6 +2,9 @@
 title: vTech Penguin Repair
 date: 2023-03-02
 slug: vtech-penguin-repair
+tags:
+- 'reverse engineering'
+- 'hardware repair'
 ---
 
 From time to time my girlfriend brings electronic children's toys home which she found in give-away boxes. Most of the time these don't work and i am intrigued in fixing them.
@@ -33,7 +36,7 @@ After resoldering and glueing both sides i was back in business and the penguin 
 ![](/img/2023/PXL_20230302_110930399.jpg)
 
 # Conclusion
-I don't like these toys. They are noisy, they fixate the attention on them. If the child doesn't play with it and it is switched on, it will periodically play a sound or song to catch the attention of the child. 
+I don't like these toys. They are noisy, they fixate the attention on them. If the child doesn't play with it and it is switched on, it will periodically play a sound or song to catch the attention of the child.
 
 But, i don't want them to get e-Waste either. Toys are mostly fixable. The electronics are quite easy to understand and most of the times it is stress on the solder joints or some blown caps, because of water damages or similar.
 

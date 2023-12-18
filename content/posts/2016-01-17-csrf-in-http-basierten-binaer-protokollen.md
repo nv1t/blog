@@ -2,6 +2,8 @@
 title: 'CSRF in Http Basierten Binaer Protokollen'
 date: 2016-01-17
 slug: 'csrf-in-http-basierten-binaer-protokollen'
+tags:
+- 'owasp'
 ---
 # Einleitung: Was ist eine CSRF?
 HTTP ist im Grunde ein stateless Protokoll. Man stellt eine Anfrage an einen Server und bekommt darauf die Antwort. Der Server schliesst nun die Verbindung und das Spiel beginnt von neuem. Damit der Server weiss wer man ist, muss zwingend eine Art Token mitgeschickt werden. Dies geschieht traditionell mit Cookies. Mit Cookies kann der Server auf dem Client Informationen speichern. Ein Cookie kann fuer einen bestimmten Pfad fuer einen gewissen Zeitraum vom Server beim Client gesetzt werden. Diese Informationen werden auch bei jeder Anfrage automatisch mitgeschickt. Da diese Cookies einen State in HTTP implementieren werden sie auch verwendet um Authentifizierungen zu Regeln. Meist wird nach einem Login ein Session Cookie generiert mit einem zufaelligen Token um dem Client die Moeglichkeit zu bieten ohne weiteren Login die Seite zu verwenden.
@@ -9,7 +11,7 @@ HTTP ist im Grunde ein stateless Protokoll. Man stellt eine Anfrage an einen Ser
 Man kann also davon ausgehen, dass, wenn eine Seite aufgerufen wird und ein gueltiges Session Cookie existiert der Benutzer automatisch eingeloggt ist.
 Eine Cross-Site-Request-Forgery Attacke beruht also darauf ein Opfer eine vom Angreifer praepierte Seite zu locken, von der ein Request zu der betreffenden Seite gestartet wird, welcher, da der Benutzer durch das Session Cookie eingeloggt ist, in seinem Kontext ausgefuehrt wird.
 
-Betrachten wir ein einfaches Beispiel: 
+Betrachten wir ein einfaches Beispiel:
 Eine Bank fuehrt ihre Ueberweisungen mit einem einfachen Aufruf aus der wie folgt aussieht:
 
 ```language-html
@@ -99,7 +101,7 @@ Durch einen einfachen Request (Hier mit Jquery vereinfacht), kann sehr einfach e
 $.ajax({
    url: '%your_service_url%',
    type: 'POST',
-   contentType: 'text/json',  
+   contentType: 'text/json',
    data: {"a": true,"b": "some string"},
    processData: false
 });
@@ -121,7 +123,7 @@ for (var i = 0, l = bytesToSendCount; i < l; i++) {
 $.ajax({
    url: '%your_service_url%',
    type: 'POST',
-   contentType: 'application/octet-stream',  
+   contentType: 'application/octet-stream',
    data: bytesArray,
    processData: false
 });

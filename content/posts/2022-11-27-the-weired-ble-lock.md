@@ -2,6 +2,12 @@
 title: The weird BLE-Lock
 date: 2022-11-27
 slug: the-weired-ble-lock
+tags:
+- 'bluetooth'
+- 'sql injection'
+- 'api'
+- 'android'
+- 'owasp'
 ---
 
 **tl;dr;** My knowledge in Bluetooth LE Communication got quite rusty over time and i wanted to refresh it with an easy target the other day. I wanted to open up the lock with a simple bluetooth command but ended up having access to their entire backend database with a lot of unique users across their entire product lineup.
@@ -182,9 +188,9 @@ Content-Length: 792
 }
 ```
 
-If you look closely on the Response, you can even spot the password of the lock, which get's send by BLE. 
+If you look closely on the Response, you can even spot the password of the lock, which get's send by BLE.
 
-I thought to myself. NICE! I can now open every lock they have. 
+I thought to myself. NICE! I can now open every lock they have.
 
 So i looked on, if i can find a better function to get informations about a specific lock.
 
@@ -229,7 +235,7 @@ Content-Length: 188
 ```
 
 We now have a method to lookup every lock in existence. I take the assumptions, they are nice people and respect the first 3 bytes of the Mac-Address to be a Vendor Identifier, we "only" have to crawl for `255*255*255` possibilities.
-
+reverse engineering
 But something weird popped up.
 
 ![](/img/2022/Pastedimage20221124094309.png)
@@ -247,7 +253,7 @@ Adding a single and double quote (yes you need both) at the `mac` parameter prod
 }
 ```
 
-Uiuiuiuiui....that doesn't look good. 
+Uiuiuiuiui....that doesn't look good.
 
 After poking around in the potential SQLi, i found a working reliable exploit and looked at the impact. There are around 180 Tables. This does not only affect the lock Product line. As i suspected from the first argument in the `GET` parameter, the API is used by other products like cameras and so on, as well.
 
