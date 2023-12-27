@@ -64,6 +64,7 @@ name = "nv1t"
   name = "Tags"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-tags\" aria-hidden=\"true\"></i>"
   url = "/tags"
+
 [[menu.main]]
   weight = 4
   identifier = "archives"
@@ -93,6 +94,13 @@ name = "nv1t"
 
 [[menu.misc]]
   weight = 1
+  identifier = "datarecovery"
+  name = "Data Recovery"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-hdd\" aria-hidden=\"true\"></i>"
+  url = "/tags/data-recovery/"
+
+[[menu.misc]]
+  weight = 2
   identifier = "rss"
   name = "RSS"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-rss\" aria-hidden=\"true\"></i>"
@@ -121,7 +129,7 @@ name = "nv1t"
   # You must use date format used by Go Time package https://golang.org/pkg/time/
   # Months (not work with short month like "jan", "feb", etc) are translated if translation exists on i18n folders
   # Default format is: January 2, 2006
-  #  dateFormat = "2 January 2006"
+  dateFormat = "2 January 2006"
 
   # ---------------------------
   # Posts related configuration

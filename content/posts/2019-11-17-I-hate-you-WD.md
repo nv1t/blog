@@ -3,6 +3,8 @@ title: I hate you, WD
 date: 2019-11-17
 layout: post
 slug: i-hate-you-wd
+categories:
+- 'data recovery'
 tags:
 - 'data recovery'
 published: true
