@@ -1,7 +1,7 @@
 baseURL = 'https://nv1t.github.io/blog-test/'
 languageCode = 'en-us'
 title = 'Blog'
-theme = 'tranquilpeak'
+theme = ['hugo-notice','tranquilpeak']
 
 paginate = 7
 canonifyurls = true
@@ -91,6 +91,13 @@ name = "nv1t"
   name = "Mastodon"
   pre = "<i class=\"sidebar-button-icon fab fa-lg fa-mastodon\" aria-hidden=\"true\"></i>"
   url = "https://chaos.social/@nv1t"
+
+[[menu.links]]
+  weight = 3
+  identifier = "linktree"
+  name = "Linktree"
+  pre = "<i class=\"sidebar-button-icon fas fa-solid fa-link\" aria-hidden=\"true\"></i>"
+  url = "https://nv1t.github.io/littlelink"
 
 [[menu.misc]]
   weight = 1
