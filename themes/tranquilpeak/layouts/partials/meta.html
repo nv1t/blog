@@ -58,6 +58,13 @@
   {{ end }}
 {{ end }}
 
+{{ with $.Params.images }}
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
+<meta name="og:image" content="{{ index . 0 | absURL }}"/>
+{{ end }}
+
+<!--
 {{ if .Scratch.Get "gravatarEmail" }}
   <meta property="og:image" content="https://www.gravatar.com/avatar/{{ (md5 (.Scratch.Get "gravatarEmail")) | urlize }}?s=640">
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/{{ (md5 (.Scratch.Get "gravatarEmail")) | urlize }}?s=640">
@@ -80,3 +87,4 @@
   <meta property="og:image" content="{{ . | absURL }}">
   <meta property="twitter:image" content="{{ . | absURL }}">
 {{ end }}
+-->

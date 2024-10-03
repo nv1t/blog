@@ -7,6 +7,8 @@ tags:
 published: true
 slug: kekz-headphones
 layout: post
+images:
+- '/img/2024/9fedcf0c1ac98650a8055d6744523e91.png'
 ---
 
 Close to a year ago, I stumbled upon the Kekz Headphones, which seemed like an interesting approach on the whole digital audio device space. They claimed to work without any internet connection and all of the content already on the headphones itself.
