@@ -1,10 +1,12 @@
 ---
-title: Kekz Headphones
+title: Reverse Engineering and Dismantling Kekz Headphones
 date: 2024-10-02
 tags:
 - 'reverse engineering'
 - 'children audio device'
 published: true
+slug: kekz-headphones
+layout: post
 ---
 
 Close to a year ago, I stumbled upon the Kekz Headphones, which seemed like an interesting approach on the whole digital audio device space. They claimed to work without any internet connection and all of the content already on the headphones itself.
