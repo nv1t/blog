@@ -11,7 +11,7 @@ images:
 - '/img/2024/9fedcf0c1ac98650a8055d6744523e91.png'
 ---
 
-Close to a year ago, I stumbled upon the Kekz Headphones, which seemed like an interesting approach on the whole digital audio device space. They claimed to work without any internet connection and all of the content already on the headphones itself.
+Close to a year ago, I stumbled upon the Kekz Headphones, which seemed like an interesting approach on the whole digital audio device space. They claimed to work without any internet connection and all of the content already on the headphones itself. They are On-Ear Headphones, which work by placing a small chip (I call them "Kekz" or "Cookie") into a little nook on the side and it plays an audio story.
 I was intrigued, because there were some speculations going around, how they operate with those "Kekz"-Chips.
 
 I invite you to join me on a journey into the inner workings of those headphones. We will talk about accessing the encrypted files on the device, breaking the crypto and discovering disclosure of data from customers.
