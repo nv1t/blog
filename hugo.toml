@@ -348,5 +348,5 @@ name = "nv1t"
   # Footer configuration
   # --------------------
   # Customize copyright value "© 2017 <CUSTOMIZATION>. All Rights Reserved"
-  #  [params.footer]
+ #  [params.footer]
   #    copyright = "<a href=\"https://github.com/kakawait\">kakawait</a>"
