@@ -108,6 +108,13 @@ name = "nv1t"
 
 [[menu.misc]]
   weight = 2
+  identifier = "reverseengineering"
+  name = "Reverse Engineering"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-cogs\" aria-hidden=\"true\"></i>"
+  url = "/tags/reverse-engineering/"
+
+[[menu.misc]]
+  weight = 3
   identifier = "rss"
   name = "RSS"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-rss\" aria-hidden=\"true\"></i>"
