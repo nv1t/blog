@@ -17,8 +17,9 @@ Recently, Mats reached out with an intriguing request: he needed help scraping d
 
 This blog documents my journey through the challenges, dead-ends, creative ideas, and eventual success in tackling the task.
 
-# Disclaimer
+{{< notice info >}}
 The methods and techniques described in this blog article involve scraping data from YouTube, which violates YouTube's Terms of Service. I do not condone or encourage the use of these methods for any purpose. This article is intended solely for educational purposes to document the technical challenges and solutions involved in data scraping. Readers are advised to respect platform policies and seek lawful and ethical alternatives to achieve their goals.
+{{< /notice >}}
 
 # The YouTube API
 My first attempt was to use the official YouTube API. It seemed like the logical starting point for gathering data. As the API is easy to use with various Python packages, I started up a Jupyter notebook and got to work quickly on writing.
