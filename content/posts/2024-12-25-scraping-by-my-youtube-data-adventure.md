@@ -8,7 +8,7 @@ tags:
 published: true
 layout: post
 images:
-- '/img/2024/45a74f28af99c8977bbaaf3e43cd7d89.png'
+- '/blog/img/2024/45a74f28af99c8977bbaaf3e43cd7d89.png'
 ---
 
 A while ago, I reached out to Mats, the creator behind the YouTube channel [Topfvollgold](https://www.youtube.com/@topf-voll-gold), offering my help with data scraping. I thought it might be useful for his projects and mentioned that I’d be happy to assist if the need ever arose.
