@@ -14,9 +14,9 @@ The upcoming blog series aims to uncover the complex world of children's audio d
 
 In the following weeks we are going to look into the following devices:
 
-- Jooki
+- [Jooki](https://nv1t.github.io/blog/reviving-jooki/)
 - Yoto mini
-- Kekz Headphones
+- [Kekz Headphones](https://nv1t.github.io/blog/kekz-headphones/)
 - Speakerbuddy
 
 Stay tuned for more.
@@ -28,3 +28,5 @@ This does not cover Toniebox or Tigerbox. Both are well researched already.
 # References
 - https://github.com/toniebox-reverse-engineering (Toniebox Reverse Engineering)
 - https://github.com/tigerbox-reverse-engineering (Tigerbox Reverse Engineering)
+- https://nv1t.github.io/blog/kekz-headphones/ (Kekz Headphones)
+- https://nv1t.github.io/blog/reviving-jooki/ (Jooki)
