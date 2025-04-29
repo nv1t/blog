@@ -274,4 +274,4 @@ This is one of those 'works on my machine' solutions—feel free to clean it up!
 - Reversing a Treadmill: https://taylorbowland.com/posts/treadmill-wrapping-up/
 - pycling ftms implementation of indoor trainers: https://github.com/zacharyedwardbull/pycycling
 - FTMS Documentation: https://www.bluetooth.org/DocMan/handlers/DownloadDoc.ashx?doc_id=423422
-- Source Code: https://gist.github.com/nv1t/3856d1f23c7d7696bdaf6ba0d4d1c17b%
+- Source Code: https://gist.github.com/nv1t/3856d1f23c7d7696bdaf6ba0d4d1c17b
