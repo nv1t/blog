@@ -11,7 +11,7 @@ images:
 - '/blog/img/2025/PXL_20250326_094740373.jpg'
 ---
 
-A while ago, I picked up a **Sportstech S-Walk treadmill** — a compact walking pad with built-in Bluetooth support. Naturally, I wanted to get _more_ out of it than the default app experience and the default app just sucked big time. So I started digging into the treadmill’s **BLE (Bluetooth Low Energy)** capabilities to read real-time speed, distance, and workout time. I found myself in **FTMS** (Fitness Machine Service), a standard for communicating protocol with fitness equipment over BLE.
+A while ago, I picked up a **Sportstech S-Walk treadmill**, a compact walking pad with built-in Bluetooth support. Naturally, I wanted to get _more_ out of it than the default app experience and the default app just sucked big time. So I started digging into the treadmill’s **BLE (Bluetooth Low Energy)** capabilities to read real-time speed, distance, and workout time. I found myself in **FTMS** (Fitness Machine Service), a standard for communicating protocol with fitness equipment over BLE.
 
 This post walks through the process of:
 - Connecting to the treadmill over BLE
@@ -23,7 +23,7 @@ It’s all done in Python, working directly with Bluetooth Low Energy through `b
 
 # First Contact: BLE Connection Basics
 
-At the heart of **Bluetooth Low Energy (BLE)** communication lies the **Generic Attribute Profile (GATT)** — a hierarchical data model built around **services** and **characteristics**.
+At the heart of **Bluetooth Low Energy (BLE)** communication lies the **Generic Attribute Profile (GATT)**, a hierarchical data model built around **services** and **characteristics**.
 
 A **characteristic** represents a **typed, addressable data value** within a service. Each characteristic is defined by:
 
@@ -37,7 +37,7 @@ A **characteristic** represents a **typed, addressable data value** within a ser
 
 Characteristics are where most real interaction with a BLE device occurs. For example, the **Fitness Machine Service (FTMS)**, standardized by the Bluetooth SIG, exposes several characteristics that map to specific telemetry or control points on fitness machines.
 
-In most fitness scenarios, clients (like our Python script) **subscribe to `Notify` characteristics** to receive real-time updates. Instead of polling the device repeatedly, the device pushes updates any time the value changes — such as every second during a workout.
+In most fitness scenarios, clients (like our Python script) **subscribe to `Notify` characteristics** to receive real-time updates. Instead of polling the device repeatedly, the device pushes updates any time the value changes, such as every second during a workout.
 
 # BLE Data: Who Are You and What Can You Do?_
 After successfully connecting to the device, I query several key **GATT characteristics** to retrieve information about the treadmill's identity and capabilities. These values are part of the standard **Device Information Service** and **FTMS (Fitness Machine Service)**.
@@ -106,7 +106,7 @@ Here's what a typical connection log looks like:
 2024-02-07 16:33:00,506 __main__ INFO: Fitness Machine Feature: 0416000001000000
 ```
 
-The values returned by these characteristics reveal quite a bit about the device. The **Manufacturer** and **Model** identifiers confirm that it's a FITHOME treadmill, specifically the `JJ-BT2-DL` model. The **Firmware** and **Hardware Revisions** help track the software version (`1.017`) and hardware iteration (`1.0`) I’m working with. The **Supported Speed Range** provides insight into the treadmill’s operational limits, while the **Fitness Machine Feature** bitfield indicates which FTMS capabilities the device supports — such as target speed control or real-time metrics.
+The values returned by these characteristics reveal quite a bit about the device. The **Manufacturer** and **Model** identifiers confirm that it's a FITHOME treadmill, specifically the `JJ-BT2-DL` model. The **Firmware** and **Hardware Revisions** help track the software version (`1.017`) and hardware iteration (`1.0`) I’m working with. The **Supported Speed Range** provides insight into the treadmill’s operational limits, while the **Fitness Machine Feature** bitfield indicates which FTMS capabilities the device supports, such as target speed control or real-time metrics.
 
 # Decoding BLE Capabilities
 The treadmill advertises its **capabilities and supported ranges** through two key GATT characteristics: `Supported Speed Range` and `Fitness Machine Feature`. These are encoded as raw byte strings, but with a little decoding, they reveal exactly what the machine can (and can’t) do.
@@ -147,7 +147,7 @@ Some of these features may require external accessories (e.g., a heart rate moni
 
 ## Live Metrics
 
-To access the treadmill’s live workout metrics — like speed, distance, and elapsed time — I needed to **subscribe to a specific GATT characteristic** that supports notifications. In this case, the characteristic with UUID `0x2ACD` (defined by the FTMS spec as "Treadmill Data") is responsible for streaming real-time performance data. By enabling notifications on this characteristic, the treadmill automatically pushes updates to my script whenever new data is available, eliminating the need for constant polling.
+To access the treadmill’s live workout metrics, like speed, distance, and elapsed time, I needed to **subscribe to a specific GATT characteristic** that supports notifications. In this case, the characteristic with UUID `0x2ACD` (defined by the FTMS spec as "Treadmill Data") is responsible for streaming real-time performance data. By enabling notifications on this characteristic, the treadmill automatically pushes updates to my script whenever new data is available, eliminating the need for constant polling.
 
 ```python
 await client.start_notify("00002acd-0000-1000-8000-00805f9b34fb", notification_handler)
@@ -215,7 +215,7 @@ Workout (UUID), Timestamp, Speed (n/100 km/h), Distance (m), Time (s)
 
 # Turning Raw Logs into Clean Data
 
-To make the data easier to import into platforms like **Garmin**, **Strava**, or other fitness tracking tools, I wrote a simple aggregation script. It reads through all the individual daily CSV log files, extracts the relevant workout entries, and combines them into a single, clean summary. This aggregated output includes total distance, total workout time, and timestamps — making it much more convenient to convert into GPX, TCX, or other formats these platforms understand.
+To make the data easier to import into platforms like **Garmin**, **Strava**, or other fitness tracking tools, I wrote a simple aggregation script. It reads through all the individual daily CSV log files, extracts the relevant workout entries, and combines them into a single, clean summary. This aggregated output includes total distance, total workout time, and timestamps, making it much more convenient to convert into GPX, TCX, or other formats these platforms understand.
 
 ![Workout summary showing final workout data and combined workout data. Final workout has ID dcd51360-f8c9-4169-8a02-40310eb16abb, with a distance of 4 meters and time of 16 seconds. Combined workout data starts at 2025-03-26 10:47:04, with total distance of 0.00 km and total time of 0 hours 0 minutes 16 seconds.](/img/2025/2025-03-26_10-49.png)
 
